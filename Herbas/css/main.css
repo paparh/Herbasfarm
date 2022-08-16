@@ -1,0 +1,611 @@
+:root{
+    --black:#191919;
+  --grey: #a9b2ac;
+  --green: rgb(2, 52, 54);
+  --wine: rgb(95, 26, 55);
+  --light-green:#9BC1BC;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--black);
+    background: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url('../images/white-background.jpeg');
+   
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  position: relative;
+
+}
+
+.info{
+    background: #a9b2ac;
+}
+
+.primary-color{
+    color: rgb(2, 52, 54);
+}
+
+.info h2{
+    word-spacing: 0.6rem;
+}
+
+.info a{
+    transition: color 2s ease-in-out;
+}
+
+.info a:hover{
+    color: #191919;
+}
+
+/* global styles */
+.bell-fonts{
+    font-family: 'Times New Roman', Times, serif;
+  }
+  /* section padding */
+  .section-padding{
+    padding: 1rem;
+  }
+  /* grid container */
+  .grid-container{
+    max-width: 90vw;
+    margin: 2rem auto;
+    display: grid;
+    grid-row-gap: 2rem;
+  }
+  @media screen and (min-width:768px){
+    .grid-container--medium-2{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 4rem;
+    }
+    .grid-container{
+      max-width: 75vw;
+    }
+  }
+  .section-title{
+    padding: 2rem 3rem;
+  }
+  
+  .section-title__name{
+    font-size: 3rem;
+    text-transform: capitalize;
+    font-weight: bold;
+    width: 100vw;
+    margin-left: 0;
+    
+  }
+  .section-title__underline{
+    background: var(--green);
+    width: 5rem;
+    height: 0.25rem;
+  }
+  .section-title__text{
+    letter-spacing: 0.1rem;
+    line-height: 1.5;
+    margin-top: 1rem;
+    color: var(--black);
+  }
+  
+  /* end of global */
+
+
+/* ************  end of default  **************** */
+
+/* **********  navbar  ************* */
+.navbar{
+    background: rgb(2, 52, 54);
+    padding: 20px 20px;
+    transition: all 1s ease;
+}
+.navbar-background{
+    padding: 5px 20px;
+}
+
+.navbar-brand{
+    font-size: 30px;
+    transition: all 1s ease;
+    color: var(--grey);
+}
+.navbar-brand:hover{
+    color: #242424;
+}
+.nav-link{
+    color: var(--grey);
+    text-decoration: none;
+    transition: all 1s ease;
+    font-size: 23px;
+}
+.nav-link:hover{
+    color: rgb(95, 26, 55);;
+}
+.nav-btn{
+    background: transparent;
+    color: var(--grey);
+    border: 2px solid var(--grey);
+    font-size: 23px;
+    transition: all 1s ease;
+}
+/* .nav-btn:hover{
+    color: var(--grey);
+    transform: rotate(10deg);
+} */
+.toggler-btn{
+    border: 2px solid var(--grey);
+    padding: 5px;
+    transition: all 1s ease;
+}
+.bar{
+    width: 30px;
+    height: 3px;
+    margin: 5px;
+    background: var(--grey);
+    transition: all 0.5s ease;
+}
+.change .bar1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.change .bar2{
+    opacity: 0;
+}
+.change .bar3{
+    transform: rotate(45deg) translate(-5px,-8px);
+}
+/* **************  end of navbar  ************* */
+
+/* ******************  header  ****************** */
+#header{
+    min-height: calc(100vh - 94px);
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url(../images/background1.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.height-90{
+    min-height: calc(100vh - 94px);
+}
+.banner h1{
+    color: var(--grey);
+    font-weight: bolder;
+    
+}
+.banner{
+  width: 90vw;
+}
+/* ****************** end of   header  ****************** */
+
+/************ about *******************/
+.about-container{
+  display: grid;
+  grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 2rem;
+  }
+  .about__image-item{
+    width: 100%;
+    display: block;
+    height: 100%;
+    
+  }
+  @media screen and (min-width:768px){
+    .about__img-special{
+      order: -1;
+      
+    }
+    .about-container{
+      grid-template-rows: 1fr 1fr;
+    }
+  } 
+  /* about page */
+  .about-page__container{
+    margin: 3rem;
+  } 
+  /************ end of about *******************/
+
+  /* *************  our work  ************************ */
+  /* work section */
+.work-container{
+    max-width: 90vw;
+    margin: 2rem auto;
+  }
+  .work-item__img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: all 1s linear;
+  }
+  
+  .work-item{
+    background: linear-gradient(var(--green),var(--green));
+    overflow: hidden;
+    position: relative;
+  }
+  .work-item:hover .work-item__img{
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+  .work-item__icon{
+    position: absolute;
+    color: var(--light-green);
+    top: 50%;
+    left: 50%;
+    display: inline-block;
+    font-size: 4rem;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    transform: scale(0);
+  }
+  .work-item:hover .work-item__icon{
+    transform: scale(1.3) translate(-50%,-50%)
+  }
+  .work-item__icon:hover{
+    color: var(--green);
+    cursor: pointer;
+  }
+  @media screen and (min-width:576px){
+    .work-container{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1rem;
+    }
+
+
+
+
+
+  }
+  @media screen and (min-width:992px){
+    .work-container{
+      height: 100vh;
+      width: 100vw;
+      grid-template-columns: repeat(4,1fr);
+      /* grid-template-rows: repeat(4,1fr); */
+      grid-template-areas: 
+      "one one two three"
+      "one one four four"
+      "five six seven seven"
+      "eight nine seven seven"
+      "ten eleven thirteen fifteen"
+      "ten twelve fourteen fifteen"
+      "seventeen nineteen sixteen twenty"
+      "seventeen nineteen eighteen twenty"
+      "twenty-one twenty-three twenty-five twenty-five"
+      "twenty-two twenty-four twenty-five twenty-five";
+    }
+    .item-1{
+      grid-area: one;
+    }
+    .item-2{
+      grid-area: two;
+    }
+    .item-3{
+      grid-area: three;
+    }
+    .item-4{
+      grid-area: four;
+    }
+    .item-5{
+      grid-area: five;
+    }
+    .item-6{
+      grid-area: six;
+    }
+    .item-7{
+      grid-area: seven;
+    }
+    .item-8{
+      grid-area: eight;
+    }
+    .item-9{
+      grid-area: nine;
+    }
+    .item-10{
+      grid-area: ten;
+    }
+    .item-11{
+      grid-area: eleven;
+    }
+    .item-12{
+      grid-area: twelve;
+    }
+    .item-13{
+      grid-area: thirteen;
+    }
+    .item-14{
+      grid-area: fourteen;
+    }
+    .item-15{
+      grid-area: fifteen;
+    }
+    .item-16{
+      grid-area: sixteen;
+    }
+    .item-17{
+      grid-area: seventeen;
+    }
+    .item-18{
+      grid-area: eighteen;
+    }
+    .item-19{
+      grid-area: nineteen;
+    }
+    .item-20{
+      grid-area: twenty;
+    }
+    .item-21{
+      grid-area: twenty-0ne;
+    }
+    .item-22{
+      grid-area: twenty-two;
+    }
+    .item-23{
+      grid-area: twenty-three;
+    }
+    .item-24{
+      grid-area: twenty-four;
+    }
+    .item-25{
+      grid-area: twenty-five;
+    }
+
+  }
+  /* modal */
+  .work-modal{
+    display: none;
+  }
+  
+  
+  .work-modal--show{
+    position: fixed;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+  .work-modal__item{
+    background: url('../images/work-1.jpeg')center/cover;
+    height: 70vh;
+    width: 80vw;
+    border: 0.5rem solid var(--green);
+    border-radius: 0.4rem;
+  
+  }
+  @media screen and (min-width:768px){
+    .work-modal__item{
+      height: 80vh;
+      width: 60vw;
+      
+    }
+  }
+  .work-modal__close{
+    position: fixed;
+    font-size: 3rem;
+    color: crimson;
+    bottom: 5%;
+    right: 5%;
+    transition: all 0.5s linear;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  
+  
+  /* ************** end of work section  ******************************* */
+
+  /****************** sign up section************ */
+  /* drink section */
+  .drink{
+    /* background: var(--light-green); */
+    background: url('../images/white-background.jpeg');
+    color: var(--wine);
+    text-transform: capitalize;
+  }
+  .drink-form,.drink-card{
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 70%;
+    grid-row-gap: 1.2rem;
+  }
+  .drink-form__feedback{
+    border: 0.1rem solid var(--green);
+    padding: 0.25rem;
+    display: none;
+  }
+  .error{
+    display: block;
+    color: red;
+    border-color: red;
+  }
+  .success{
+    display: block;
+    color:green;
+    border-color: green;
+  }
+  .drink-form__title,.drink-card__title{
+    font-size: 3rem;
+  }
+  .input-name,.input-lastname,.input-email,.input-message,.input-submit{
+    width: 100%;
+  }
+  .input-name,.input-lastname,.input-email,.input-submit,.input-message{
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    background: rgb(2, 52, 54,0.5);
+    color: var(--green);
+    border: none;
+    outline: none;
+  }
+  .input-name::placeholder,.input-lastname::placeholder,.input-email::placeholder,.input-message::placeholder{
+    color: var(--wine);
+    text-transform: capitalize;
+    font-size: 1rem;
+  }
+  .input-submit{
+    background: var(--wine);
+    color: var(--light-green);
+    transition: all 0.5s linear;
+    cursor: pointer;
+    text-transform: uppercase;
+    width: 50%;
+  }
+  .input-submit:hover{
+    opacity: 0.7;
+  }
+  .drink-card__list{
+    display: grid;
+    grid-template-columns: 50%;
+    grid-row-gap: 2rem;
+    justify-content: center;
+  }
+  .person{
+    border: 0.1rem solid rgb(95, 26, 55);
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    align-items: center;
+    text-align: left;
+    grid-gap: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+  }
+  .person__thumbnail{
+    border-radius: 50%;
+  }
+  /* @media screen and (min-width:768px){
+    .drink-card__list{
+      grid-template-columns: 1fr;
+      width: 30%;
+      left: 80%;
+    }
+  } */
+
+
+/* **************  end of sign up section  *********************** */
+
+/*********** contact section *****************/
+.contact-container{
+    max-width: 90vw;
+    margin: 3rem auto;
+    display: grid;
+    grid-row-gap: 1rem;
+  }
+  .contact-info{
+    display: grid;
+    justify-content: center;
+  }
+  .contact-item{
+    margin: 1rem 0;
+    padding: 0.5rem;
+  }
+  .contact-item__icon{
+    font-size: 3rem;
+    color: var(--green);
+  }
+  .contact-item__title{
+    text-transform: uppercase;
+    margin: 0.5rem 0;
+    letter-spacing: 0.25rem;
+    /* font-style: italic; */
+    font-weight: bold;
+  }
+  .contact-item__text{
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: var(--black);
+  }
+  @media screen and (min-width:768px){
+    .contact-info{
+      grid-template-columns: repeat(3, 1fr);
+      order: -1;
+    }
+  }
+  @media screen and (min-width:992px){
+    .contact-info{
+      grid-template-columns: 1fr;
+      order: 0;
+    }
+    .contact-container{
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-column-gap: 2rem;
+    }
+    .contact-map{
+      align-self: center;
+    }
+  }
+
+/* *************** end of contact  *************** */
+
+/********* footer *************/
+/* footer {
+    text-align: center;
+    padding: 15px;
+    background: rgb(2, 52, 54);
+    color: var(--grey);
+    
+  }
+  
+  .copyright{
+   display: inline-flex;
+   padding: 1rem;
+   
+  }
+  .copy{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  } */
+  
+  /********* end of footer ***********/
+  /* ********  footer  *********** */
+#back-to-top{
+    background:rgb(2, 52, 54);
+    border-radius: 10px;
+    display: inline-block;
+    /* position: fixed;
+    bottom: 70px;
+    right: 10px; */
+}
+.scrollTop{
+    position: fixed;
+    bottom: 70px;
+    right: 10px;
+}
+.footer{
+    background:rgb(2, 52, 54);
+    color: var(--grey);
+}
+.copy{
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
